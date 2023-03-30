@@ -4,7 +4,7 @@ O código apresenta uma implementação de um simulador da pilha TCP/IP, que é 
 
 O código é dividido em cinco classes que representam cada uma das camadas: CamadaFisica, CamadaDeRede, CamadaDeTransporte, CamadaDeAplicacao e Pacote. Cada classe tem suas funções específicas e trabalha em conjunto com as demais camadas.
 
-Linguagem usada: `Python`
+Linguagem utilizada: `Python`
 
 `Exemplo de uso`
 No final do código, há um exemplo de uso das classes, onde é criada uma instância de cada camada e é enviado um pacote da camada de aplicação para a máquina 2.
