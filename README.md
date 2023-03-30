@@ -13,7 +13,7 @@ A classe Pacote é utilizada pelas outras classes do código para encapsular os 
 
 Linguagem utilizada: `Python`
 
-Topologia utilizada: `Estrela`
+Topologia utilizada: `Ponto a ponto`
 
 `Exemplo de uso`
 No final do código, há um exemplo de uso das classes, onde é criada uma instância de cada camada e é enviado um pacote da camada de aplicação para a máquina 2.
