@@ -25,7 +25,7 @@ No final do código, há um exemplo de uso das classes, onde é criada uma inst�
 `Execução`
 Para executar o código, basta copiar e colar no seu ambiente de desenvolvimento preferido, como o Visual Studio Code ou Jupyter Notebook, e executar.
 
-#Funcionamento
+#Funcionamento#
 
 O código acima implementa um modelo de camadas para enviar dados entre duas máquinas. As camadas são divididas em:
 
