@@ -27,21 +27,24 @@ Para executar o código, basta copiar e colar no seu ambiente de desenvolvimento
 
 # Funcionamento
 
-O código acima implementa um modelo de camadas para enviar dados entre duas máquinas. As camadas são divididas em:
+O código fornece uma implementação simplificada de uma pilha de protocolos de rede com quatro camadas principais: camada de aplicação, camada de transporte, camada de rede e camada física.
 
-Camada física: envia e recebe sinais elétricos ou eletromagnéticos na rede. No código, essa camada é representada pela classe CamadaFisica.
+Camada de Aplicação:
+A camada de aplicação é responsável por empacotar e desempacotar os dados da aplicação. Quando a camada de aplicação envia um pacote, ela cria uma instância da classe Pacote e adiciona informações de origem, destino e dados. Em seguida, ela passa esse pacote para a camada de transporte enviar. Quando a camada de transporte recebe um pacote, ele chama a função receber da camada de aplicação para desempacotar os dados.
 
-Camada de rede: lida com a transmissão de pacotes de dados de uma máquina para outra. Essa camada é responsável por lidar com o endereçamento lógico dos dispositivos e com a roteamento dos pacotes. No código, essa camada é representada pela classe CamadaDeRede.
+Camada de Transporte:
+A camada de transporte é responsável por fornecer serviços de comunicação confiáveis. Quando a camada de transporte recebe um pacote da camada de aplicação, ele empacota novamente os dados na classe Pacote e adiciona informações de transporte. Ele então passa o pacote para a camada de rede enviar. Quando a camada de transporte recebe um pacote da camada de rede, ele chama a função receber da camada de aplicação para desempacotar os dados.
 
-Camada de transporte: responsável pela entrega dos pacotes, confiabilidade dos dados, controle de fluxo e controle de congestionamento. No código, essa camada é representada pela classe CamadaDeTransporte.
+Camada de Rede:
+A camada de rede é responsável por fornecer serviços de comunicação de rede. Quando a camada de rede recebe um pacote da camada de transporte, ele empacota novamente os dados na classe Pacote e adiciona informações de rede. Ele então passa o pacote para a camada física enviar. Quando a camada de rede recebe um pacote da camada física, ele chama a função receber da camada de transporte para desempacotar os dados.
 
-Camada de aplicação: gerencia a comunicação de alto nível entre as aplicações em diferentes máquinas. No código, essa camada é representada pela classe CamadaDeAplicacao.
+Camada Física:
+A camada física é responsável por enviar e receber dados físicos. Quando a camada física recebe um pacote, ele chama a função receber da camada de rede para desempacotar os dados. Quando a camada física envia um pacote, ele chama a função receber passando o mesmo pacote, simulando assim a recepção do pacote pelo destino.
 
-Ao enviar dados, a camada de aplicação empacota os dados em um objeto da classe Pacote e envia para a camada de transporte, que empacota novamente o pacote com informações adicionais (origem e destino) e envia para a camada de rede. A camada de rede, por sua vez, empacota novamente o pacote e envia para a camada física, que é responsável por enviar o sinal na rede.
+A ordem de chamada das camadas é a seguinte: Camada de aplicação -> Camada de transporte -> Camada de rede -> Camada física. Cada camada chama a próxima camada na pilha para enviar ou receber os pacotes.
 
-Ao receber os dados, o processo é inverso: a camada física recebe o sinal, decodifica os dados e envia para a camada de rede, que desempacota o pacote e envia para a camada de transporte. A camada de transporte desempacota o pacote e envia para a camada de aplicação, que finalmente recebe os dados originais.
+Ao final do código, é criada uma instância da classe CamadaDeAplicacao e invocado o método enviar, passando a mensagem "Hello World" e o destino "Máquina 2". Isso inicia todo o processo de envio e recebimento de pacotes pelas camadas da pilha de protocolos de rede.
 
-No final do código, é criada uma instância de CamadaDeAplicacao e chamada a função enviar com os parâmetros "Hello World" (dados a serem enviados) e "Máquina 2" (destino).
 
 
 
