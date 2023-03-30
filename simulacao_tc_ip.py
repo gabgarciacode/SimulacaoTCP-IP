@@ -11,8 +11,7 @@ class Pacote:
 
 # Classe para representar a camada de aplicação
 
-
-class CamadaDeAplicacao:
+class CamadaDeAplicacao: #Dados da aplicação que estão sendo transmitidos, como uma mensagem de texto, arquivo de áudio ou vídeo, e-mail, etc. O cabeçalho pode incluir informações como a porta de origem e destino, protocolo de aplicação, tamanho dos dados, etc. Definição para ilustar melhor.
 
     def __init__(self):
         self.camada_de_transporte = camada_de_transporte
@@ -34,7 +33,8 @@ class CamadaDeAplicacao:
 
 
 # Classe para representar a camada de transporte
-class CamadaDeTransporte:
+
+class CamadaDeTransporte: #Segmentos ou datagramas que contêm informações sobre o controle de fluxo, confirmação de recebimento, multiplexação e demultiplexação de conexões. O cabeçalho pode incluir informações como número de sequência, número de confirmação, tamanho da janela, tipo de protocolo de transporte, etc. Definição para ilustar melhor.
     def __init__(self):
         self.camada_de_aplicacao = camada_de_aplicacao
         self.camada_de_rede = camada_de_rede
@@ -59,7 +59,8 @@ class CamadaDeTransporte:
 
 
 # Classe para representar a camada de Rede
-class CamadaDeRede:
+
+class CamadaDeRede: # Pacotes IP que são usados para encaminhar os dados através da rede. O cabeçalho pode incluir informações como endereço IP de origem e destino, identificação de pacote, tempo de vida (TTL), tipo de protocolo de rede, etc. Definição para ilustar melhor.
     def __init__(self):
         self.camada_de_transporte = camada_de_transporte
         self.camada_fisica = camada_fisica
@@ -81,7 +82,7 @@ class CamadaDeRede:
         self.camada_fisica().enviar(pacote_rede)
 
 
-class CamadaFisica:
+class CamadaFisica: #Bits que são transmitidos fisicamente na rede. O cabeçalho pode incluir informações como o endereço MAC de origem e destino, tipo de quadro, tamanho do quadro, sequência de bits de verificação de erros, etc. Definição para ilustar melhor.
 
     def __init__(self):
         self.camada_de_rede = camada_de_rede
