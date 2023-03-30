@@ -8,7 +8,7 @@ O código é dividido em cinco classes que representam cada uma das camadas: Cam
 Essa classe representa um pacote de dados que será transmitido na rede. Ela possui três atributos: origem, destino e dados. O atributo dados pode ser uma string ou qualquer outro tipo de dado que precise ser transmitido na rede.
 
 `CamadaDeAplicacao`
-CamadaDeAplicacao demonstra a camada de aplicação, sendo responsável por empacotar os dados em um objeto Pacote e enviar para a camada de transporte. A função enviar recebe os dados e o destino para criar um objeto Pacote e chamada a função receber da camada de transporte.
+CamadaDeAplicacao representa a camada de aplicação, sendo responsável por empacotar os dados em um objeto Pacote e enviar para a camada de transporte. A função enviar recebe os dados e o destino para criar um objeto Pacote e chamada a função receber da camada de transporte.
 
 `CamadaDeTransporte`
 A classe CamadaDeTransporte representa a camada de transporte, que é responsável por empacotar os dados em um novo objeto Pacote com a adição de informações de controle, como o número de sequência, checksum, entre outros. Esses dados são transmitidos para a camada de rede. A função enviar recebe um objeto Pacote, cria um novo objeto Pacote com as informações adicionais e chama a função receber da camada de rede.
