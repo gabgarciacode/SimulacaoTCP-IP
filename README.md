@@ -25,6 +25,24 @@ No final do código, há um exemplo de uso das classes, onde é criada uma inst�
 `Execução`
 Para executar o código, basta copiar e colar no seu ambiente de desenvolvimento preferido, como o Visual Studio Code ou Jupyter Notebook, e executar.
 
+#Funcionamento
+
+O código acima implementa um modelo de camadas para enviar dados entre duas máquinas. As camadas são divididas em:
+
+Camada física: envia e recebe sinais elétricos ou eletromagnéticos na rede. No código, essa camada é representada pela classe CamadaFisica.
+
+Camada de rede: lida com a transmissão de pacotes de dados de uma máquina para outra. Essa camada é responsável por lidar com o endereçamento lógico dos dispositivos e com a roteamento dos pacotes. No código, essa camada é representada pela classe CamadaDeRede.
+
+Camada de transporte: responsável pela entrega dos pacotes, confiabilidade dos dados, controle de fluxo e controle de congestionamento. No código, essa camada é representada pela classe CamadaDeTransporte.
+
+Camada de aplicação: gerencia a comunicação de alto nível entre as aplicações em diferentes máquinas. No código, essa camada é representada pela classe CamadaDeAplicacao.
+
+Ao enviar dados, a camada de aplicação empacota os dados em um objeto da classe Pacote e envia para a camada de transporte, que empacota novamente o pacote com informações adicionais (origem e destino) e envia para a camada de rede. A camada de rede, por sua vez, empacota novamente o pacote e envia para a camada física, que é responsável por enviar o sinal na rede.
+
+Ao receber os dados, o processo é inverso: a camada física recebe o sinal, decodifica os dados e envia para a camada de rede, que desempacota o pacote e envia para a camada de transporte. A camada de transporte desempacota o pacote e envia para a camada de aplicação, que finalmente recebe os dados originais.
+
+No final do código, é criada uma instância de CamadaDeAplicacao e chamada a função enviar com os parâmetros "Hello World" (dados a serem enviados) e "Máquina 2" (destino).
+
 
 
 
