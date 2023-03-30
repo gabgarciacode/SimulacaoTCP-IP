@@ -12,6 +12,7 @@ O atributo origem armazena a origem do pacote, ou seja, o endereço IP da máqui
 A classe Pacote é utilizada pelas outras classes do código para encapsular os dados que serão transmitidos, facilitando o processo de envio e recebimento dos dados entre as diferentes camadas de rede.
 
 Linguagem utilizada: `Python`
+`Topologia utilizada`: Estrela
 
 `Exemplo de uso`
 No final do código, há um exemplo de uso das classes, onde é criada uma instância de cada camada e é enviado um pacote da camada de aplicação para a máquina 2.
