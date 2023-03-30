@@ -41,6 +41,19 @@ A ordem de chamada das camadas é a seguinte: Camada de aplicação -> Camada de
 
 Ao final do código, é criada uma instância da classe CamadaDeAplicacao e invocado o método enviar, passando a mensagem "Hello World" e o destino "Máquina 2". Isso inicia todo o processo de envio e recebimento de pacotes pelas camadas da pilha de protocolos de rede.
 
+`Tipos de dados encapsulados nas Camadas`
+
+Geralmente, os seguintes tipos de dados são encapsulados nas camadas de rede:
+
+Camada de aplicação: Dados da aplicação que estão sendo transmitidos, como uma mensagem de texto, arquivo de áudio ou vídeo, e-mail, etc. O cabeçalho pode incluir informações como a porta de origem e destino, protocolo de aplicação, tamanho dos dados, etc.
+
+Camada de transporte: Segmentos ou datagramas que contêm informações sobre o controle de fluxo, confirmação de recebimento, multiplexação e demultiplexação de conexões. O cabeçalho pode incluir informações como número de sequência, número de confirmação, tamanho da janela, tipo de protocolo de transporte, etc.
+
+Camada de rede: Pacotes IP que são usados para encaminhar os dados através da rede. O cabeçalho pode incluir informações como endereço IP de origem e destino, identificação de pacote, tempo de vida (TTL), tipo de protocolo de rede, etc.
+
+Camada física: Bits que são transmitidos fisicamente na rede. O cabeçalho pode incluir informações como o endereço MAC de origem e destino, tipo de quadro, tamanho do quadro, sequência de bits de verificação de erros, etc.
+
+Esses dados são encapsulados nos cabeçalhos das respectivas camadas do modelo OSI ou TCP/IP. Cada camada adiciona informações específicas ao cabeçalho, que são usadas para controlar e gerenciar a transmissão dos dados. O encapsulamento é o processo de adicionar informações de cabeçalho em torno dos dados em cada camada, e a remoção dessas informações de cabeçalho é conhecida como desencapsulamento.
 
 
 
