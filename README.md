@@ -19,13 +19,6 @@ CamadaDeRede representa a camada de rede, que é responsável por enviar os paco
 `CamadaFisica`
 A classe CamadaFisica representa a camada física, sendo responsável por transmitir o pacote pela rede física. Ela recebe o objeto Pacote da camada de rede, codifica os dados e os transmite pela rede física. A função enviar recebe um objeto Pacote, codifica os dados, transmite pela rede física e chama a função receber da camada de destino.
 
-`Contador`
-O contador é uma variável que serve para contar a quantidade de pacotes que foram criados e/ou processados em cada camada da rede. Ele é implementado como uma variável de classe, o que significa que o valor dela é compartilhado entre todas as instâncias da classe. Dessa forma, ele pode ser utilizado para contabilizar a quantidade de pacotes que passaram por uma determinada camada da rede.
-
-Cada camada de rede (CamadaDeAplicacao, CamadaDeTransporte, CamadaDeRede e CamadaFisica) possui um contador que é incrementado toda vez que um pacote é processado naquela camada. O objetivo do contador é ajudar a monitorar a quantidade de pacotes que estão passando por cada camada da rede, o que pode ser útil para depuração e otimização do desempenho da rede.
-
-Além disso, o contador também é utilizado para exibir a ordem em que os pacotes são processados em cada camada da rede. Cada vez que um pacote é processado em uma determinada camada, o contador é incrementado e esse valor é exibido na mensagem de log correspondente. Isso ajuda a entender melhor como os pacotes estão sendo transmitidos e processados na rede.
-
 `Exemplo de uso`
 No final do código, há um exemplo de uso das classes, onde é criada uma instância de cada camada e é enviado um pacote da camada de aplicação para a máquina 2.
 
