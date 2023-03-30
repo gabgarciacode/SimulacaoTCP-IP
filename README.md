@@ -1,4 +1,4 @@
-# SimulacaoTCP-IP (Visão Geral)
+# SimulacaoTCP-IP
 
 O código apresenta uma implementação de um simulador da pilha TCP/IP, que é um conjunto de protocolos de comunicação de dados amplamente utilizado na internet e em redes de computadores. A pilha TCP/IP é composta por várias camadas, cada uma com suas responsabilidades específicas no processo de comunicação. Nesse código, são representadas as camadas de aplicação, transporte, rede e física, e são utilizadas classes em Python para implementar cada uma dessas camadas. Através da interação entre essas camadas, é possível enviar e receber pacotes de dados entre diferentes máquinas em uma rede.
 
@@ -25,7 +25,7 @@ No final do código, há um exemplo de uso das classes, onde é criada uma inst�
 `Execução`
 Para executar o código, basta copiar e colar no seu ambiente de desenvolvimento preferido, como o Visual Studio Code ou Jupyter Notebook, e executar.
 
-#Funcionamento#
+# Funcionamento
 
 O código acima implementa um modelo de camadas para enviar dados entre duas máquinas. As camadas são divididas em:
 
